@@ -15,4 +15,13 @@ jobs:
     steps:
     - uses: actions/checkout@v3
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag my-image-name:$(date +%s)
+      run: docker build . --file Dockerfile --tag app:$(date +%s)
+    
+    - name: Push the Docker image to the registry
+      run: |
+        docker login -u ${{ secrets.DOCKER_USERNAME }} -p ${{ secrets.DOCKER_PASSWORD }}
+        docker tag app:$(date +%s) ${{ secrets.DOCKER_USERNAME }}/app:$(date +%s)
+        docker push ${{ secrets.DOCKER_USERNAME }}/app:$(date +%s)
+      
+    - name: Run the Docker image
+      run: docker run -d -p 8000:80 ${{ secrets.DOCKER_USERNAME }}/app:$(date +%s)
