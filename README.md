@@ -15,12 +15,12 @@ This task is aimed at assessing your skills and understanding of Docker containe
 - The Docker image should be lightweight, optimized, and follow best practices.
 
 #### Deployment Pipeline
-- Set up a CI/CD pipeline using any CI/CD tool of your choice (e.g., Jenkins, GitLab CI/CD, CircleCI, etc.).
+- Set up a CI/CD pipeline using any CI/CD tool of your choice (Github Actions).
 - Configure the pipeline to trigger a build whenever changes are pushed to the application's Git repository.
 - Implement the following stages in your pipeline:
   1. **Build**: Build the Docker image using the Dockerfile.
   2. **Test**: Run tests against the Docker image or the deployed container.
-  3. **Publish**: Push the Docker image to a Docker registry (e.g., Docker Hub, AWS ECR, etc.).
+  3. **Publish**: Push the Docker image to a Docker registry (Docker Hub).
   4. **Deploy**: Deploy the Docker image to a Kubernetes cluster.
 
 #### Kubernetes Orchestration
