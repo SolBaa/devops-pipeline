@@ -33,15 +33,6 @@ This task is aimed at assessing your skills and understanding of Docker containe
 - Utilize environment variables or configuration files for application-specific configurations.
 - Consider security best practices, such as securing the Docker daemon, managing secrets, and restricting access to sensitive information.
 
-### Deliverables
-- A Git repository containing:
-  - The source code of the sample application.
-  - The Dockerfile used to build the Docker image.
-  - The code for your CI/CD pipeline (e.g., Jenkinsfile, GitLab CI/CD configuration, etc.).
-  - A README file with instructions for setting up and running the Dockerized application and the deployment pipeline.
-
-**Note**: Please ensure that all sensitive information (e.g., access keys, credentials) is properly secured and not included in the submitted code or documentation.
-
 
 # How to run the app
 
